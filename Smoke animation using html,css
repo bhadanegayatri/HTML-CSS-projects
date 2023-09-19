@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smoke animation</title>
+
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		section{
+			height: 100vh;
+		}
+		h1{
+			position: absolute;
+			top: 35%;
+			left: 25%;
+			letter-spacing:0.2em;
+			font-size: 5em;
+			color: white;
+			z-index:0;
+
+		}
+		h1 span{
+			opacity:0;
+			display: inline-block;
+			animation: animate 3s linear forwards;
+		}
+		@keyframes animate{
+			0%{
+				opacity: 0;
+				transform: rotateY(90deg) translate(10px);
+				filter: blur(10px);
+			}
+			100%{
+				opacity:2;
+				transform: rotateY(0deg) translate(0);
+				filter: blur(0);
+			}
+		}
+		video{
+			object-fit: cover;
+			margin-left:20px;
+		}
+		s1{
+			animation-delay:2s;
+		}
+		s2{
+			animation-delay:3s;
+		}
+		s3{
+			animation-delay:2.5s;
+		}
+		s4{
+			animation-delay:3s;
+		}
+		s5{
+			animation-delay:3.5s;
+		}
+		s6{
+			animation-delay:3.75s;
+		}
+		s7{
+			animation-delay:4s;
+		}
+
+	</style>
+</head>
+<body>
+
+<section>
+	<video src="smoke1.mp4" autoplay muted ></video>
+	<h1>
+		<span id="s1">G</span>
+		<span id="s2">A</span>
+		<span id="s3">Y</span>
+		<span id="s4" >A</span>
+		<span id="s5">T</span>
+		<span id="s6">R</span>
+		<span id="s7" >I</span>
+	</h1>
+		
+</section>
+
+</body>
+</html>
